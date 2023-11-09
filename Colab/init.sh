@@ -3,7 +3,7 @@ init()
 {
     mkdir -p /content/ssh
     apt-get install -y sshfs
-    if test -f "/root/.ssh/id_rsa"; then
+    if test -f "/colab/.ssh/id_rsa"; then
         echo "Private key already exists, skip creation..."
     else
         cat /dev/zero | ssh-keygen -b 4096 -q -N ""
